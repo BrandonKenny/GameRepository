@@ -14,22 +14,45 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         Vector2 velocity = this.gameObject.GetComponent<Rigidbody2D>().velocity;
-        if (Input.GetKey(KeyCode.A))
+
+        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.S))
+        {
+            velocity.y = 0;
+            print("W and S");
+        }
+        else if (Input.GetKey(KeyCode.W))
+        {
+            velocity.y = 8;
+            print("W");
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            velocity.y = -8;
+            print("S");
+        }
+        else
+        {
+            velocity.y = 0;
+            print("NONE");
+        }
+
+        if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D))
+        {
+            velocity.x = 0;
+        }
+        else if (Input.GetKey(KeyCode.A))
         {
             velocity.x = -8;
         }
-        if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D))
         {
             velocity.x = 8;
         }
-        if (Input.GetKey(KeyCode.W))
+        else
         {
-            velocity.y = 8;
+            velocity.x = 0;
         }
-        if (Input.GetKey(KeyCode.S))
-        {
-            velocity.y = -8;
-        }
+        
         this.gameObject.GetComponent<Rigidbody2D>().velocity = velocity;
     }
 }
