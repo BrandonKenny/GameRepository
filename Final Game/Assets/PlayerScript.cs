@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
+    public int playerFlipped = 0;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -18,22 +20,18 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.S))
         {
             velocity.y = 0;
-            print("W and S");
         }
         else if (Input.GetKey(KeyCode.W))
         {
             velocity.y = 8;
-            print("W");
         }
         else if (Input.GetKey(KeyCode.S))
         {
             velocity.y = -8;
-            print("S");
         }
         else
         {
             velocity.y = 0;
-            print("NONE");
         }
 
         if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D))
@@ -43,10 +41,12 @@ public class PlayerScript : MonoBehaviour
         else if (Input.GetKey(KeyCode.A))
         {
             velocity.x = -8;
+            playerFlipped = 1;
         }
         else if (Input.GetKey(KeyCode.D))
         {
             velocity.x = 8;
+            playerFlipped = 0;
         }
         else
         {
