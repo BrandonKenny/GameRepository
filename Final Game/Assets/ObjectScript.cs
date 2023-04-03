@@ -5,6 +5,7 @@ using UnityEngine;
 public class ObjectScript : MonoBehaviour
 {
     public GameObject collisionObject;
+    public int count = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -17,13 +18,16 @@ public class ObjectScript : MonoBehaviour
     {
         
     }
+
     void OnCollisionEnter2D(Collision2D basketball)
     {
-        if (basketball.gameObject.name == collisionObject.name && Input.GetKeyDown(KeyCode.LeftControl))
+        if (count == 0)
         {
             Destroy(gameObject);
-            Debug.Log("E");
         }
-        Destroy(gameObject);
+        else
+        {
+            count--;
+        }
     }
 }

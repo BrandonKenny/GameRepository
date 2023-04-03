@@ -13,6 +13,10 @@ public class ProjectileController : MonoBehaviour
     public LayerMask enemy;
     private bool isAttacking;
 
+    public GameObject projectileSound;
+    public GameObject swordSound;
+    public GameObject swordHit;
+
 
     // Start is called before the first frame update
     void Start()
@@ -81,6 +85,7 @@ public class ProjectileController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            projectileSound.GetComponent<AudioSource>().Play();
         }
         
         isAttacking = Physics2D.OverlapCircle(firePoint.position, attackRadius, enemy);
@@ -88,6 +93,11 @@ public class ProjectileController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftControl) && isAttacking)
         {
             Instantiate(combatPrefab, firePoint.position, firePoint.rotation);
+            swordHit.GetComponent<AudioSource>().Play();
+        }
+        else if (Input.GetKeyDown(KeyCode.LeftControl) && !isAttacking)
+        {
+            swordSound.GetComponent<AudioSource>().Play();
         }
 
     }

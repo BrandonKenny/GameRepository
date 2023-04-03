@@ -51,6 +51,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4335427847237338201, guid: 12652c380e302e74683437291c835a07, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4335427847237338201, guid: 12652c380e302e74683437291c835a07, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4335427847237338213, guid: 12652c380e302e74683437291c835a07, type: 3}
       propertyPath: m_Name
       value: Combat
