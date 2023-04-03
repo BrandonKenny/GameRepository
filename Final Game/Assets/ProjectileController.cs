@@ -8,6 +8,10 @@ public class ProjectileController : MonoBehaviour
     public PlayerScript playerScript;
     public GameObject bulletPrefab;
     public Transform firePoint;
+    public GameObject combatPrefab;
+    public float attackRadius;
+    public LayerMask enemy;
+    private bool isAttacking;
 
 
     // Start is called before the first frame update
@@ -77,6 +81,13 @@ public class ProjectileController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        }
+        
+        isAttacking = Physics2D.OverlapCircle(firePoint.position, attackRadius, enemy);
+
+        if (Input.GetKeyDown(KeyCode.LeftControl) && isAttacking)
+        {
+            Instantiate(combatPrefab, firePoint.position, firePoint.rotation);
         }
 
     }

@@ -22,7 +22,8 @@ public class ObjectScript : MonoBehaviour
         if (basketball.gameObject.name == collisionObject.name && Input.GetKeyDown(KeyCode.LeftControl))
         {
             Destroy(gameObject);
+            Debug.Log("E");
         }
-        Destroy(this.gameObject);
+        Destroy(gameObject);
     }
 }
