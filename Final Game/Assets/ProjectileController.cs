@@ -102,9 +102,4 @@ public class ProjectileController : MonoBehaviour
 
     }
 
-    void OnCollisionEnter2D(Collision2D basketball)
-    {
-        Destroy(gameObject);
-    }
-
 }
