@@ -15,23 +15,27 @@ public class Intro : MonoBehaviour
     public GameObject run;
     public GameObject nooo;
     public GameObject saveHer;
+
+    public GameObject startSound;
+    public GameObject michaelSound;
     
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(Intro());
+        startSound.GetComponent<AudioSource>().Play();
+        StartCoroutine(IntroSequence());
     }
 
-    IEnumerator Intro()
+    IEnumerator IntroSequence()
     {
         yield return new WaitForSeconds(4);
         niceDay.gameObject.GetComponent<Transform>().position = new Vector2(3f, 2f);
         
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(3);
         niceDay.gameObject.GetComponent<Transform>().position = new Vector2(3f, 20f);
         yeah.gameObject.GetComponent<Transform>().position = new Vector2(-2f, 2f);
         
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(3);
         yeah.gameObject.GetComponent<Transform>().position = new Vector2(-2f, 20f);
         michael.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(7f, 0f);
         michael.gameObject.GetComponent<Animator>().SetInteger("MichaelState", 4);
@@ -39,8 +43,10 @@ public class Intro : MonoBehaviour
         yield return new WaitForSeconds(1);
         michael.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
         michael.gameObject.GetComponent<Animator>().SetInteger("MichaelState", 0);
-        
-        yield return new WaitForSeconds(2);
+        startSound.GetComponent<AudioSource>().Stop();
+        michaelSound.GetComponent<AudioSource>().Play();
+
+        yield return new WaitForSeconds(1);
         run.gameObject.GetComponent<Transform>().position = new Vector2(3f, 2f);
         
         yield return new WaitForSeconds(2);

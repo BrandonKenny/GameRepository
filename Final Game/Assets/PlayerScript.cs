@@ -6,6 +6,7 @@ public class PlayerScript : MonoBehaviour
 {
     public Animator animator;
     public int playerFlipped = 0;
+    public LayerMask enemy;
     
     // Start is called before the first frame update
     void Start()
@@ -63,5 +64,17 @@ public class PlayerScript : MonoBehaviour
         }
         
         this.gameObject.GetComponent<Rigidbody2D>().velocity = velocity;
+
+        //void OnCollisionEnter2D(Collision2D collision)
+        {
+            //if (collision.gameObject.tag == enemy)
+            {
+                //Destroy(gameObject);
+            }
+            //else
+            {
+                //return;
+            }
+        }
     }
 }
