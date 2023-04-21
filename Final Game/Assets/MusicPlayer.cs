@@ -15,4 +15,9 @@ public class MusicPlayer : MonoBehaviour
 
         GameObject.DontDestroyOnLoad(gameObject);
     }
+
+    public void PlayClicked()
+    {
+        this.gameObject.GetComponent<AudioSource>().mute = true;
+    }
 }

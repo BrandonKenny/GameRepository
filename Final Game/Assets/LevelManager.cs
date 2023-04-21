@@ -13,4 +13,10 @@ public class LevelManager : MonoBehaviour
     {
         Application.Quit();
     }
+    
+    public GameObject canvas;
+    public void ControlsMenu()
+    {
+        canvas.GetComponent<RectTransform>().position = new Vector2(3000f, 0f);
+    }
 }
