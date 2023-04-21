@@ -7,6 +7,7 @@ public class PlayerScript : MonoBehaviour
     public Animator animator;
     public int playerFlipped = 0;
     public LayerMask enemy;
+    public GameObject player;
     
     // Start is called before the first frame update
     void Start()
@@ -60,21 +61,22 @@ public class PlayerScript : MonoBehaviour
         else
         {
             velocity.x = 0;
-            
-        }
-        
-        this.gameObject.GetComponent<Rigidbody2D>().velocity = velocity;
 
-        //void OnCollisionEnter2D(Collision2D collision)
+        }
+
+        this.gameObject.GetComponent<Rigidbody2D>().velocity = velocity;
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Walls")
         {
-            //if (collision.gameObject.tag == enemy)
-            {
-                //Destroy(gameObject);
-            }
-            //else
-            {
-                //return;
-            }
+            Debug.Log("Collide with walls");
+        }
+        else
+        {
+            Destroy(gameObject);
+            Debug.Log("Destroy");
         }
     }
 }
