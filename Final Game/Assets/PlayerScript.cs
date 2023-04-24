@@ -8,6 +8,10 @@ public class PlayerScript : MonoBehaviour
     public int playerFlipped = 0;
     public LayerMask enemy;
     public GameObject player;
+    public GameObject red;
+    public LevelManager levelManager;
+
+    public int playerHealth = 5;
     
     // Start is called before the first frame update
     void Start()
@@ -75,8 +79,12 @@ public class PlayerScript : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
-            Debug.Log("Destroy");
+            StartCoroutine(levelManager.RedShow());
+            playerHealth--;
+            if (playerHealth <= 0)
+            {
+                StartCoroutine(levelManager.Death());
+            }
         }
     }
 }

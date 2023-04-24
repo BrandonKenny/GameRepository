@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+    public GameObject player;
+    public GameObject red;
+
     public void LoadLevel(string level)
     {
         SceneManager.LoadScene(level);
@@ -13,10 +16,20 @@ public class LevelManager : MonoBehaviour
     {
         Application.Quit();
     }
-    
-    public GameObject canvas;
-    public void ControlsMenu()
+    public IEnumerator RedShow()
     {
-        canvas.GetComponent<RectTransform>().position = new Vector2(3000f, 0f);
+        if (player != null)
+        {
+            red.gameObject.GetComponent<Transform>().position = new Vector2(player.gameObject.GetComponent<Transform>().position.x, player.gameObject.GetComponent<Transform>().position.y);
+        }
+        yield return new WaitForSeconds(0.1f);
+        red.gameObject.GetComponent<Transform>().position = new Vector2(500f, 0f);
+    }
+    public IEnumerator Death()
+    {
+        Destroy(player);
+        StartCoroutine(RedShow());
+        yield return new WaitForSeconds(1);
+        //LoadLevel("Lose");
     }
 }
