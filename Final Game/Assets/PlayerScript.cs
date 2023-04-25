@@ -65,7 +65,14 @@ public class PlayerScript : MonoBehaviour
         else
         {
             velocity.x = 0;
+        }
 
+        
+
+        if (this.gameObject.GetComponent<Transform>().position.z == 20)
+        {
+            velocity.x = 0;
+            velocity.y = 0;
         }
 
         this.gameObject.GetComponent<Rigidbody2D>().velocity = velocity;

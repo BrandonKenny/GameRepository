@@ -23,8 +23,12 @@ public class Intro : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        oldMusic = null;
         oldMusic = GameObject.FindObjectOfType<MusicPlayer>();
-        oldMusic.GetComponent<AudioSource>().mute = true;
+        if (oldMusic != null)
+        {
+            oldMusic.GetComponent<AudioSource>().mute = true;
+        }
         startSound.GetComponent<AudioSource>().Play();
         StartCoroutine(IntroSequence());
     }

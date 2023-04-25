@@ -27,9 +27,9 @@ public class LevelManager : MonoBehaviour
     }
     public IEnumerator Death()
     {
-        Destroy(player);
+        player.gameObject.GetComponent<Transform>().position = new Vector3(player.gameObject.GetComponent<Transform>().position.x, player.gameObject.GetComponent<Transform>().position.y, 20f);
         StartCoroutine(RedShow());
         yield return new WaitForSeconds(1);
-        //LoadLevel("Lose");
+        LoadLevel("Lose");
     }
 }
