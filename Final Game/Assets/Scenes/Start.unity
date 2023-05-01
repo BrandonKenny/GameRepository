@@ -292,7 +292,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 059358c6522833941829c6df0bf25c7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1164452805}
+  player: {fileID: 0}
+  red: {fileID: 0}
+  plainsBoss: {fileID: 0}
+  plainsDefeated: {fileID: 0}
 --- !u!4 &56799604
 Transform:
   m_ObjectHideFlags: 0
@@ -1221,7 +1224,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Intro
+          m_StringArgument: Main
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1380161787

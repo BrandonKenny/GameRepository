@@ -8,6 +8,18 @@ public class LevelManager : MonoBehaviour
     public GameObject player;
     public GameObject red;
 
+    public GameObject plainsBoss;
+    public GameObject plainsDefeated;
+
+    public GameObject snowBoss;
+    public GameObject snowDefeated;
+
+    public GameObject desertBoss;
+    public GameObject desertDefeated;
+
+    public GameObject forestBoss;
+    public GameObject forestDefeated;
+
     public void LoadLevel(string level)
     {
         SceneManager.LoadScene(level);
@@ -16,6 +28,8 @@ public class LevelManager : MonoBehaviour
     {
         Application.Quit();
     }
+    
+    //Player stuff
     public IEnumerator RedShow()
     {
         if (player != null)
@@ -31,5 +45,69 @@ public class LevelManager : MonoBehaviour
         StartCoroutine(RedShow());
         yield return new WaitForSeconds(1);
         LoadLevel("Lose");
+    }
+    
+    //Plains Boss stuff
+    public void PlainsDeathStart()
+    {
+        StartCoroutine(PlainsDeath());
+        Destroy(plainsBoss);
+    }
+    public IEnumerator PlainsDeath()
+    {
+        // FOR BUILD MODE
+        //plainsDefeated.gameObject.GetComponent<Transform>().position = new Vector2(840f, 965f);
+        // FOR PREVIEW MODE
+        plainsDefeated.gameObject.GetComponent<Transform>().position = new Vector2(480.5f, 450.5f);
+        yield return new WaitForSeconds(3.5f);
+        plainsDefeated.gameObject.GetComponent<Transform>().position = new Vector2(0f, 1500f);
+    }
+
+    //Snow Boss stuff
+    public void SnowDeathStart()
+    {
+        StartCoroutine(SnowDeath());
+        Destroy(snowBoss);
+    }
+    public IEnumerator SnowDeath()
+    {
+        // FOR BUILD MODE
+        //snowDefeated.gameObject.GetComponent<Transform>().position = new Vector2(840f, 965f);
+        // FOR PREVIEW MODE
+        snowDefeated.gameObject.GetComponent<Transform>().position = new Vector2(480.5f, 450.5f);
+        yield return new WaitForSeconds(3.5f);
+        snowDefeated.gameObject.GetComponent<Transform>().position = new Vector2(0f, 1500f);
+    }
+
+    //Desert Boss stuff
+    public void DesertDeathStart()
+    {
+        StartCoroutine(DesertDeath());
+        Destroy(desertBoss);
+    }
+    public IEnumerator DesertDeath()
+    {
+        // FOR BUILD MODE
+        //desertDefeated.gameObject.GetComponent<Transform>().position = new Vector2(840f, 965f);
+        // FOR PREVIEW MODE
+        desertDefeated.gameObject.GetComponent<Transform>().position = new Vector2(480.5f, 450.5f);
+        yield return new WaitForSeconds(3.5f);
+        desertDefeated.gameObject.GetComponent<Transform>().position = new Vector2(0f, 1500f);
+    }
+
+    //Forest Boss stuff
+    public void ForestDeathStart()
+    {
+        StartCoroutine(ForestDeath());
+        Destroy(forestBoss);
+    }
+    public IEnumerator ForestDeath()
+    {
+        // FOR BUILD MODE
+        //forestDefeated.gameObject.GetComponent<Transform>().position = new Vector2(840f, 965f);
+        // FOR PREVIEW MODE
+        forestDefeated.gameObject.GetComponent<Transform>().position = new Vector2(480.5f, 450.5f);
+        yield return new WaitForSeconds(3.5f);
+        forestDefeated.gameObject.GetComponent<Transform>().position = new Vector2(0f, 1500f);
     }
 }
