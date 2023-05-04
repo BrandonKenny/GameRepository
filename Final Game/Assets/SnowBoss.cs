@@ -70,6 +70,29 @@ public class SnowBoss : MonoBehaviour
                 yield return new WaitForSeconds(2);
                 //animator.SetInteger("SnowState", 0);
                 this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
+                yield return new WaitForSeconds(1);
+                //animator.SetInteger("SnowState", 1);
+                this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(-3f, 0f);
+                StartCoroutine(DownSpam());
+                yield return new WaitForSeconds(2);
+                //animator.SetInteger("SnowState", 0);
+                this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
+                yield return new WaitForSeconds(1);
+                //animator.SetInteger("SnowState", 1);
+                this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, -3f);
+                StartCoroutine(RightSpam());
+                yield return new WaitForSeconds(4);
+                //animator.SetInteger("SnowState", 0);
+                this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
+                yield return new WaitForSeconds(1);
+                //animator.SetInteger("SnowState", 1);
+                this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(3f, 3f);
+                StartCoroutine(DiagonalSpam());
+                yield return new WaitForSeconds(2);
+                //animator.SetInteger("SnowState", 0);
+                this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
+                //this.gameObject.GetComponent<Transform>().position = new Vector2(0f, 0f);
+                yield return new WaitForSeconds(1);
             }
         }
     }
@@ -161,6 +184,136 @@ public class SnowBoss : MonoBehaviour
         Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
         yield return new WaitForSeconds(0.125f);
         attack.rotation = Quaternion.Euler(0f, 0f, 337.5f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        attack.rotation = Quaternion.Euler(0f, 0f, 0f);
+    }
+
+    IEnumerator DownSpam()
+    {
+        attack.rotation = Quaternion.Euler(0f, 0f, 270f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        yield return new WaitForSeconds(0.25f);
+        attack.rotation = Quaternion.Euler(0f, 0f, 270f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        yield return new WaitForSeconds(0.25f);
+        attack.rotation = Quaternion.Euler(0f, 0f, 270f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        yield return new WaitForSeconds(0.25f);
+        attack.rotation = Quaternion.Euler(0f, 0f, 270f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        yield return new WaitForSeconds(0.25f);
+        attack.rotation = Quaternion.Euler(0f, 0f, 270f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        yield return new WaitForSeconds(0.25f);
+        attack.rotation = Quaternion.Euler(0f, 0f, 270f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        yield return new WaitForSeconds(0.25f);
+        attack.rotation = Quaternion.Euler(0f, 0f, 270f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        yield return new WaitForSeconds(0.25f);
+        attack.rotation = Quaternion.Euler(0f, 0f, 270f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        yield return new WaitForSeconds(0.25f);
+        attack.rotation = Quaternion.Euler(0f, 0f, 270f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        attack.rotation = Quaternion.Euler(0f, 0f, 0f);
+    }
+
+    IEnumerator RightSpam()
+    {
+        attack.rotation = Quaternion.Euler(0f, 0f, 0f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        yield return new WaitForSeconds(0.25f);
+        attack.rotation = Quaternion.Euler(0f, 0f, 0f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        yield return new WaitForSeconds(0.25f);
+        attack.rotation = Quaternion.Euler(0f, 0f, 0f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        yield return new WaitForSeconds(0.25f);
+        attack.rotation = Quaternion.Euler(0f, 0f, 0f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        yield return new WaitForSeconds(0.25f);
+        attack.rotation = Quaternion.Euler(0f, 0f, 0f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        yield return new WaitForSeconds(0.25f);
+        attack.rotation = Quaternion.Euler(0f, 0f, 0f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        yield return new WaitForSeconds(0.25f);
+        attack.rotation = Quaternion.Euler(0f, 0f, 0f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        yield return new WaitForSeconds(0.25f);
+        attack.rotation = Quaternion.Euler(0f, 0f, 0f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        yield return new WaitForSeconds(0.25f);
+        attack.rotation = Quaternion.Euler(0f, 0f, 0f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        yield return new WaitForSeconds(0.25f);
+        attack.rotation = Quaternion.Euler(0f, 0f, 0f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        yield return new WaitForSeconds(0.25f);
+        attack.rotation = Quaternion.Euler(0f, 0f, 0f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        yield return new WaitForSeconds(0.25f);
+        attack.rotation = Quaternion.Euler(0f, 0f, 0f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        yield return new WaitForSeconds(0.25f);
+        attack.rotation = Quaternion.Euler(0f, 0f, 0f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        yield return new WaitForSeconds(0.25f);
+        attack.rotation = Quaternion.Euler(0f, 0f, 0f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        yield return new WaitForSeconds(0.25f);
+        attack.rotation = Quaternion.Euler(0f, 0f, 0f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        yield return new WaitForSeconds(0.25f);
+        attack.rotation = Quaternion.Euler(0f, 0f, 0f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        yield return new WaitForSeconds(0.25f);
+        attack.rotation = Quaternion.Euler(0f, 0f, 0f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        attack.rotation = Quaternion.Euler(0f, 0f, 0f);
+    }
+
+    IEnumerator DiagonalSpam()
+    {
+        attack.rotation = Quaternion.Euler(0f, 0f, 135f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        attack.rotation = Quaternion.Euler(0f, 0f, 315f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        yield return new WaitForSeconds(0.25f);
+        attack.rotation = Quaternion.Euler(0f, 0f, 135f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        attack.rotation = Quaternion.Euler(0f, 0f, 315f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        yield return new WaitForSeconds(0.25f);
+        attack.rotation = Quaternion.Euler(0f, 0f, 135f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        attack.rotation = Quaternion.Euler(0f, 0f, 315f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        yield return new WaitForSeconds(0.25f);
+        attack.rotation = Quaternion.Euler(0f, 0f, 135f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        attack.rotation = Quaternion.Euler(0f, 0f, 315f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        yield return new WaitForSeconds(0.25f);
+        attack.rotation = Quaternion.Euler(0f, 0f, 135f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        attack.rotation = Quaternion.Euler(0f, 0f, 315f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        yield return new WaitForSeconds(0.25f);
+        attack.rotation = Quaternion.Euler(0f, 0f, 135f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        attack.rotation = Quaternion.Euler(0f, 0f, 315f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        yield return new WaitForSeconds(0.25f);
+        attack.rotation = Quaternion.Euler(0f, 0f, 135f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        attack.rotation = Quaternion.Euler(0f, 0f, 315f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        yield return new WaitForSeconds(0.25f);
+        attack.rotation = Quaternion.Euler(0f, 0f, 135f);
+        Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
+        attack.rotation = Quaternion.Euler(0f, 0f, 315f);
         Instantiate(projectilePrefab, attackOrigin.position, attack.rotation);
         attack.rotation = Quaternion.Euler(0f, 0f, 0f);
     }

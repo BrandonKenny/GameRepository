@@ -56,9 +56,9 @@ public class LevelManager : MonoBehaviour
     public IEnumerator PlainsDeath()
     {
         // FOR BUILD MODE
-        //plainsDefeated.gameObject.GetComponent<Transform>().position = new Vector2(840f, 965f);
+        plainsDefeated.gameObject.GetComponent<Transform>().position = new Vector2(840f, 965f);
         // FOR PREVIEW MODE
-        plainsDefeated.gameObject.GetComponent<Transform>().position = new Vector2(480.5f, 450.5f);
+        //plainsDefeated.gameObject.GetComponent<Transform>().position = new Vector2(480.5f, 450.5f);
         yield return new WaitForSeconds(3.5f);
         plainsDefeated.gameObject.GetComponent<Transform>().position = new Vector2(0f, 1500f);
     }

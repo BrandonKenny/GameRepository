@@ -12,7 +12,13 @@ public class PlayerScript : MonoBehaviour
     public LevelManager levelManager;
 
     public int playerHealth = 5;
-    
+
+    public GameObject heart1;
+    public GameObject heart2;
+    public GameObject heart3;
+    public GameObject heart4;
+    public GameObject heart5;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -67,8 +73,6 @@ public class PlayerScript : MonoBehaviour
             velocity.x = 0;
         }
 
-        
-
         if (this.gameObject.GetComponent<Transform>().position.z == 20)
         {
             velocity.x = 0;
@@ -76,6 +80,56 @@ public class PlayerScript : MonoBehaviour
         }
 
         this.gameObject.GetComponent<Rigidbody2D>().velocity = velocity;
+
+        //Hearts
+        if (playerHealth == 5)
+        {
+            heart1.transform.position = new Vector3(heart1.transform.position.x, heart1.transform.position.y, -2f);
+            heart2.transform.position = new Vector3(heart2.transform.position.x, heart2.transform.position.y, -2f);
+            heart3.transform.position = new Vector3(heart3.transform.position.x, heart3.transform.position.y, -2f);
+            heart4.transform.position = new Vector3(heart4.transform.position.x, heart4.transform.position.y, -2f);
+            heart5.transform.position = new Vector3(heart5.transform.position.x, heart5.transform.position.y, -2f);
+        }
+        if (playerHealth == 4)
+        {
+            heart1.transform.position = new Vector3(heart1.transform.position.x, heart1.transform.position.y, -2f);
+            heart2.transform.position = new Vector3(heart2.transform.position.x, heart2.transform.position.y, -2f);
+            heart3.transform.position = new Vector3(heart3.transform.position.x, heart3.transform.position.y, -2f);
+            heart4.transform.position = new Vector3(heart4.transform.position.x, heart4.transform.position.y, -2f);
+            heart5.transform.position = new Vector3(heart5.transform.position.x, heart5.transform.position.y, 2f);
+        }
+        if (playerHealth == 3)
+        {
+            heart1.transform.position = new Vector3(heart1.transform.position.x, heart1.transform.position.y, -2f);
+            heart2.transform.position = new Vector3(heart2.transform.position.x, heart2.transform.position.y, -2f);
+            heart3.transform.position = new Vector3(heart3.transform.position.x, heart3.transform.position.y, -2f);
+            heart4.transform.position = new Vector3(heart4.transform.position.x, heart4.transform.position.y, 2f);
+            heart5.transform.position = new Vector3(heart5.transform.position.x, heart5.transform.position.y, 2f);
+        }
+        if (playerHealth == 2)
+        {
+            heart1.transform.position = new Vector3(heart1.transform.position.x, heart1.transform.position.y, -2f);
+            heart2.transform.position = new Vector3(heart2.transform.position.x, heart2.transform.position.y, -2f);
+            heart3.transform.position = new Vector3(heart3.transform.position.x, heart3.transform.position.y, 2f);
+            heart4.transform.position = new Vector3(heart4.transform.position.x, heart4.transform.position.y, 2f);
+            heart5.transform.position = new Vector3(heart5.transform.position.x, heart5.transform.position.y, 2f);
+        }
+        if (playerHealth == 1)
+        {
+            heart1.transform.position = new Vector3(heart1.transform.position.x, heart1.transform.position.y, -2f);
+            heart2.transform.position = new Vector3(heart2.transform.position.x, heart2.transform.position.y, 2f);
+            heart3.transform.position = new Vector3(heart3.transform.position.x, heart3.transform.position.y, 2f);
+            heart4.transform.position = new Vector3(heart4.transform.position.x, heart4.transform.position.y, 2f);
+            heart5.transform.position = new Vector3(heart5.transform.position.x, heart5.transform.position.y, 2f);
+        }
+        if (playerHealth == 0)
+        {
+            heart1.transform.position = new Vector3(heart1.transform.position.x, heart1.transform.position.y, 2f);
+            heart2.transform.position = new Vector3(heart2.transform.position.x, heart2.transform.position.y, 2f);
+            heart3.transform.position = new Vector3(heart3.transform.position.x, heart3.transform.position.y, 2f);
+            heart4.transform.position = new Vector3(heart4.transform.position.x, heart4.transform.position.y, 2f);
+            heart5.transform.position = new Vector3(heart5.transform.position.x, heart5.transform.position.y, 2f);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -83,6 +137,14 @@ public class PlayerScript : MonoBehaviour
         if (collision.gameObject.tag == "Walls")
         {
             Debug.Log("Collide with walls");
+        }
+        else if (collision.gameObject.tag == "Hearts")
+        {
+            if (playerHealth < 5)
+            {
+                playerHealth++;
+            }
+            Debug.Log("Collide with hearts");
         }
         else
         {
