@@ -17,6 +17,9 @@ public class PlainsBoss : MonoBehaviour
     public Transform attackOrigin;
     public Transform attack;
 
+    public GameObject bossMusic;
+    public GameObject normalMusic;
+
     
     // Start is called before the first frame update
     void Start()
@@ -31,6 +34,8 @@ public class PlainsBoss : MonoBehaviour
         if (isInPlayerRange && !hasStarted)
         {
             StartCoroutine(PlainsBossfight());
+            bossMusic.GetComponent<AudioSource>().Play();
+            normalMusic.GetComponent<AudioSource>().Stop();
             hasStarted = true;
             //Debug.Log("In Range");
         }

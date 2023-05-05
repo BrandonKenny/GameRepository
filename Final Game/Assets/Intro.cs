@@ -84,7 +84,7 @@ public class Intro : MonoBehaviour
         saveHer.gameObject.GetComponent<Transform>().position = new Vector2(0f, 0f);
         
         yield return new WaitForSeconds(5);
-        levelManager.LoadLevel("Main");
+        levelManager.LoadLevel("Main 2");
     }
 
     // Update is called once per frame

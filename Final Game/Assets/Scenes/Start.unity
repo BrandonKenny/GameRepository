@@ -296,6 +296,14 @@ MonoBehaviour:
   red: {fileID: 0}
   plainsBoss: {fileID: 0}
   plainsDefeated: {fileID: 0}
+  snowBoss: {fileID: 0}
+  snowDefeated: {fileID: 0}
+  desertBoss: {fileID: 0}
+  desertDefeated: {fileID: 0}
+  forestBoss: {fileID: 0}
+  forestDefeated: {fileID: 0}
+  bossMusic: {fileID: 0}
+  normalMusic: {fileID: 0}
 --- !u!4 &56799604
 Transform:
   m_ObjectHideFlags: 0
@@ -1224,7 +1232,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Main
+          m_StringArgument: Intro
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1380161787

@@ -20,6 +20,9 @@ public class LevelManager : MonoBehaviour
     public GameObject forestBoss;
     public GameObject forestDefeated;
 
+    public GameObject bossMusic;
+    public GameObject normalMusic;
+
     public void LoadLevel(string level)
     {
         SceneManager.LoadScene(level);
@@ -51,6 +54,8 @@ public class LevelManager : MonoBehaviour
     public void PlainsDeathStart()
     {
         StartCoroutine(PlainsDeath());
+        bossMusic.GetComponent<AudioSource>().Stop();
+        normalMusic.GetComponent<AudioSource>().Play();
         Destroy(plainsBoss);
     }
     public IEnumerator PlainsDeath()

@@ -6,12 +6,19 @@ public class CameraController : MonoBehaviour
 {
     public GameObject player;
 
-    float xChange1 = 12.82f; //CHANGE TO 10.56 for build mode
-    float xChange2 = 11.61f;
-    float xChange3 = 10.4f;
-    float xChange4 = 9.19f;
-    float xChange5 = 7.98f;
+    //PREVIEW MODE
+    //float xChange1 = 12.82f;
+    //float xChange2 = 11.61f;
+    //float xChange3 = 10.4f;
+    //float xChange4 = 9.19f;
+    //float xChange5 = 7.98f;
     float yChange = 6.39f;
+    //BUILD MODE
+    float xChange1 = 10.56f;
+    float xChange2 = 9.35f;
+    float xChange3 = 8.14f;
+    float xChange4 = 6.93f;
+    float xChange5 = 5.72f;
 
     public GameObject heart1;
     public GameObject heartempty1;
