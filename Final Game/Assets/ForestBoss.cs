@@ -44,6 +44,22 @@ public class ForestBoss : MonoBehaviour
         }
     }
 
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Walls")
+        {
+            Debug.Log("Collide with walls");
+        }
+        else
+        {
+            forestBossHealth--;
+            if (forestBossHealth <= 0)
+            {
+                levelManager.ForestDeathStart();
+            }
+        }
+    }
+
     IEnumerator ForestBossfight()
     {
         if (!hasStarted)
