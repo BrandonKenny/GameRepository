@@ -72,6 +72,8 @@ public class LevelManager : MonoBehaviour
     public void SnowDeathStart()
     {
         StartCoroutine(SnowDeath());
+        bossMusic.GetComponent<AudioSource>().Stop();
+        normalMusic.GetComponent<AudioSource>().Play();
         Destroy(snowBoss);
     }
     public IEnumerator SnowDeath()
@@ -88,6 +90,8 @@ public class LevelManager : MonoBehaviour
     public void DesertDeathStart()
     {
         StartCoroutine(DesertDeath());
+        bossMusic.GetComponent<AudioSource>().Stop();
+        normalMusic.GetComponent<AudioSource>().Play();
         Destroy(desertBoss);
     }
     public IEnumerator DesertDeath()
@@ -104,6 +108,8 @@ public class LevelManager : MonoBehaviour
     public void ForestDeathStart()
     {
         StartCoroutine(ForestDeath());
+        bossMusic.GetComponent<AudioSource>().Stop();
+        normalMusic.GetComponent<AudioSource>().Play();
         Destroy(forestBoss);
     }
     public IEnumerator ForestDeath()

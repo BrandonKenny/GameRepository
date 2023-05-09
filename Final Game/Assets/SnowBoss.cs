@@ -17,6 +17,9 @@ public class SnowBoss : MonoBehaviour
     public Transform attackOrigin;
     public Transform attack;
 
+    public GameObject bossMusic;
+    public GameObject normalMusic;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +33,8 @@ public class SnowBoss : MonoBehaviour
         if (isInPlayerRange && !hasStarted)
         {
             StartCoroutine(SnowBossfight());
+            bossMusic.GetComponent<AudioSource>().Play();
+            normalMusic.GetComponent<AudioSource>().Stop();
             hasStarted = true;
             //Debug.Log("In Range");
         }
@@ -64,32 +69,32 @@ public class SnowBoss : MonoBehaviour
             {
                 StartCoroutine(SpikeAttack());
                 yield return new WaitForSeconds(2);
-                //animator.SetInteger("SnowState", 1);
+                animator.SetInteger("SnowState", 3);
                 this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 3f);
                 StartCoroutine(FastCircle());
                 yield return new WaitForSeconds(2);
-                //animator.SetInteger("SnowState", 0);
+                animator.SetInteger("SnowState", 0);
                 this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
                 yield return new WaitForSeconds(1);
-                //animator.SetInteger("SnowState", 1);
+                animator.SetInteger("SnowState", 2);
                 this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(-3f, 0f);
                 StartCoroutine(DownSpam());
                 yield return new WaitForSeconds(2);
-                //animator.SetInteger("SnowState", 0);
+                animator.SetInteger("SnowState", 0);
                 this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
                 yield return new WaitForSeconds(1);
-                //animator.SetInteger("SnowState", 1);
+                animator.SetInteger("SnowState", 4);
                 this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, -3f);
                 StartCoroutine(RightSpam());
                 yield return new WaitForSeconds(4);
-                //animator.SetInteger("SnowState", 0);
+                animator.SetInteger("SnowState", 0);
                 this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
                 yield return new WaitForSeconds(1);
-                //animator.SetInteger("SnowState", 1);
+                animator.SetInteger("SnowState", 1);
                 this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(3f, 3f);
                 StartCoroutine(DiagonalSpam());
                 yield return new WaitForSeconds(2);
-                //animator.SetInteger("SnowState", 0);
+                animator.SetInteger("SnowState", 0);
                 this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
                 //this.gameObject.GetComponent<Transform>().position = new Vector2(0f, 0f);
                 yield return new WaitForSeconds(1);
