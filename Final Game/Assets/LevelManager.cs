@@ -20,6 +20,9 @@ public class LevelManager : MonoBehaviour
     public GameObject forestBoss;
     public GameObject forestDefeated;
 
+    public GameObject finalBoss;
+    public GameObject finalDefeated;
+
     public GameObject bossMusic;
     public GameObject normalMusic;
 
@@ -120,5 +123,23 @@ public class LevelManager : MonoBehaviour
         forestDefeated.gameObject.GetComponent<Transform>().position = new Vector2(480.5f, 450.5f);
         yield return new WaitForSeconds(3.5f);
         forestDefeated.gameObject.GetComponent<Transform>().position = new Vector2(0f, 1500f);
+    }
+
+    //Final Boss stuff
+    public void FinalDeathStart()
+    {
+        StartCoroutine(FinalDeath());
+        bossMusic.GetComponent<AudioSource>().Stop();
+        normalMusic.GetComponent<AudioSource>().Play();
+        Destroy(finalBoss);
+    }
+    public IEnumerator FinalDeath()
+    {
+        // FOR BUILD MODE
+        //finalDefeated.gameObject.GetComponent<Transform>().position = new Vector2(840f, 965f);
+        // FOR PREVIEW MODE
+        finalDefeated.gameObject.GetComponent<Transform>().position = new Vector2(480.5f, 450.5f);
+        yield return new WaitForSeconds(3.5f);
+        finalDefeated.gameObject.GetComponent<Transform>().position = new Vector2(0f, 1500f);
     }
 }

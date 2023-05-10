@@ -149,7 +149,7 @@ public class PlayerScript : MonoBehaviour
         else
         {
             StartCoroutine(levelManager.RedShow());
-            playerHealth--;
+            //playerHealth--;
             if (playerHealth <= 0)
             {
                 StartCoroutine(levelManager.Death());
