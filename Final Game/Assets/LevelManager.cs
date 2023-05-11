@@ -82,9 +82,9 @@ public class LevelManager : MonoBehaviour
     public IEnumerator SnowDeath()
     {
         // FOR BUILD MODE
-        //snowDefeated.gameObject.GetComponent<Transform>().position = new Vector2(840f, 965f);
+        snowDefeated.gameObject.GetComponent<Transform>().position = new Vector2(840f, 965f);
         // FOR PREVIEW MODE
-        snowDefeated.gameObject.GetComponent<Transform>().position = new Vector2(480.5f, 450.5f);
+        //snowDefeated.gameObject.GetComponent<Transform>().position = new Vector2(480.5f, 450.5f);
         yield return new WaitForSeconds(3.5f);
         snowDefeated.gameObject.GetComponent<Transform>().position = new Vector2(0f, 1500f);
     }
@@ -100,9 +100,9 @@ public class LevelManager : MonoBehaviour
     public IEnumerator DesertDeath()
     {
         // FOR BUILD MODE
-        //desertDefeated.gameObject.GetComponent<Transform>().position = new Vector2(840f, 965f);
+        desertDefeated.gameObject.GetComponent<Transform>().position = new Vector2(840f, 965f);
         // FOR PREVIEW MODE
-        desertDefeated.gameObject.GetComponent<Transform>().position = new Vector2(480.5f, 450.5f);
+        //desertDefeated.gameObject.GetComponent<Transform>().position = new Vector2(480.5f, 450.5f);
         yield return new WaitForSeconds(3.5f);
         desertDefeated.gameObject.GetComponent<Transform>().position = new Vector2(0f, 1500f);
     }
@@ -118,9 +118,9 @@ public class LevelManager : MonoBehaviour
     public IEnumerator ForestDeath()
     {
         // FOR BUILD MODE
-        //forestDefeated.gameObject.GetComponent<Transform>().position = new Vector2(840f, 965f);
+        forestDefeated.gameObject.GetComponent<Transform>().position = new Vector2(840f, 965f);
         // FOR PREVIEW MODE
-        forestDefeated.gameObject.GetComponent<Transform>().position = new Vector2(480.5f, 450.5f);
+        //forestDefeated.gameObject.GetComponent<Transform>().position = new Vector2(480.5f, 450.5f);
         yield return new WaitForSeconds(3.5f);
         forestDefeated.gameObject.GetComponent<Transform>().position = new Vector2(0f, 1500f);
     }
@@ -136,10 +136,11 @@ public class LevelManager : MonoBehaviour
     public IEnumerator FinalDeath()
     {
         // FOR BUILD MODE
-        //finalDefeated.gameObject.GetComponent<Transform>().position = new Vector2(840f, 965f);
+        finalDefeated.gameObject.GetComponent<Transform>().position = new Vector2(840f, 965f);
         // FOR PREVIEW MODE
-        finalDefeated.gameObject.GetComponent<Transform>().position = new Vector2(480.5f, 450.5f);
+        //finalDefeated.gameObject.GetComponent<Transform>().position = new Vector2(480.5f, 450.5f);
         yield return new WaitForSeconds(3.5f);
         finalDefeated.gameObject.GetComponent<Transform>().position = new Vector2(0f, 1500f);
+        LoadLevel("Win");
     }
 }
