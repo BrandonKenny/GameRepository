@@ -26,6 +26,8 @@ public class LevelManager : MonoBehaviour
     public GameObject bossMusic;
     public GameObject normalMusic;
 
+    public GameObject bossWall;
+
     public void LoadLevel(string level)
     {
         SceneManager.LoadScene(level);
@@ -142,5 +144,16 @@ public class LevelManager : MonoBehaviour
         yield return new WaitForSeconds(3.5f);
         finalDefeated.gameObject.GetComponent<Transform>().position = new Vector2(0f, 1500f);
         LoadLevel("Win");
+    }
+
+    //BossWall Text
+    public IEnumerator BossWall()
+    {
+        // FOR BUILD MODE
+        bossWall.gameObject.GetComponent<Transform>().position = new Vector2(840f, 965f);
+        // FOR PREVIEW MODE
+        //bossWall.gameObject.GetComponent<Transform>().position = new Vector2(480.5f, 450.5f);
+        yield return new WaitForSeconds(3.5f);
+        bossWall.gameObject.GetComponent<Transform>().position = new Vector2(0f, 1500f);
     }
 }

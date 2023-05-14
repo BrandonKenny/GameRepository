@@ -138,6 +138,10 @@ public class PlayerScript : MonoBehaviour
         {
             Debug.Log("Collide with walls");
         }
+        else if (collision.gameObject.tag == "BossWall")
+        {
+            StartCoroutine(levelManager.BossWall());
+        }
         else if (collision.gameObject.tag == "Hearts")
         {
             if (playerHealth < 5)
