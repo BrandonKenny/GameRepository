@@ -94,7 +94,7 @@ public class PlainsBoss : MonoBehaviour
                 yield return new WaitForSeconds(2);
                 animator.SetInteger("PlainsState", 0);
                 this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
-                this.gameObject.GetComponent<Transform>().position = new Vector2(0f, 15f);
+                //this.gameObject.GetComponent<Transform>().position = new Vector2(0f, 15f);
                 yield return new WaitForSeconds(1);
             }
         }
