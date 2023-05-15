@@ -11,13 +11,18 @@ public class PlayerScript : MonoBehaviour
     public GameObject red;
     public LevelManager levelManager;
 
-    public int playerHealth = 5;
+    public int playerHealth = 10;
 
     public GameObject heart1;
     public GameObject heart2;
     public GameObject heart3;
     public GameObject heart4;
     public GameObject heart5;
+    public GameObject heart6;
+    public GameObject heart7;
+    public GameObject heart8;
+    public GameObject heart9;
+    public GameObject heart10;
 
     // Start is called before the first frame update
     void Start()
@@ -82,41 +87,131 @@ public class PlayerScript : MonoBehaviour
         this.gameObject.GetComponent<Rigidbody2D>().velocity = velocity;
 
         //Hearts
-        if (playerHealth == 5)
+        if (playerHealth == 10)
         {
+            heart6.transform.position = new Vector3(heart6.transform.position.x, heart6.transform.position.y, -2f);
+            heart7.transform.position = new Vector3(heart7.transform.position.x, heart7.transform.position.y, -2f);
+            heart8.transform.position = new Vector3(heart8.transform.position.x, heart8.transform.position.y, -2f);
+            heart9.transform.position = new Vector3(heart9.transform.position.x, heart9.transform.position.y, -2f);
+            heart10.transform.position = new Vector3(heart10.transform.position.x, heart10.transform.position.y, -2f);
             heart1.transform.position = new Vector3(heart1.transform.position.x, heart1.transform.position.y, -2f);
             heart2.transform.position = new Vector3(heart2.transform.position.x, heart2.transform.position.y, -2f);
             heart3.transform.position = new Vector3(heart3.transform.position.x, heart3.transform.position.y, -2f);
             heart4.transform.position = new Vector3(heart4.transform.position.x, heart4.transform.position.y, -2f);
             heart5.transform.position = new Vector3(heart5.transform.position.x, heart5.transform.position.y, -2f);
         }
-        if (playerHealth == 4)
+        if (playerHealth == 9)
         {
+            heart6.transform.position = new Vector3(heart6.transform.position.x, heart6.transform.position.y, -2f);
+            heart7.transform.position = new Vector3(heart7.transform.position.x, heart7.transform.position.y, -2f);
+            heart8.transform.position = new Vector3(heart8.transform.position.x, heart8.transform.position.y, -2f);
+            heart9.transform.position = new Vector3(heart9.transform.position.x, heart9.transform.position.y, -2f);
+            heart10.transform.position = new Vector3(heart10.transform.position.x, heart10.transform.position.y, -2f);
             heart1.transform.position = new Vector3(heart1.transform.position.x, heart1.transform.position.y, -2f);
             heart2.transform.position = new Vector3(heart2.transform.position.x, heart2.transform.position.y, -2f);
             heart3.transform.position = new Vector3(heart3.transform.position.x, heart3.transform.position.y, -2f);
             heart4.transform.position = new Vector3(heart4.transform.position.x, heart4.transform.position.y, -2f);
             heart5.transform.position = new Vector3(heart5.transform.position.x, heart5.transform.position.y, 2f);
         }
-        if (playerHealth == 3)
+        if (playerHealth == 8)
         {
+            heart6.transform.position = new Vector3(heart6.transform.position.x, heart6.transform.position.y, -2f);
+            heart7.transform.position = new Vector3(heart7.transform.position.x, heart7.transform.position.y, -2f);
+            heart8.transform.position = new Vector3(heart8.transform.position.x, heart8.transform.position.y, -2f);
+            heart9.transform.position = new Vector3(heart9.transform.position.x, heart9.transform.position.y, -2f);
+            heart10.transform.position = new Vector3(heart10.transform.position.x, heart10.transform.position.y, -2f);
             heart1.transform.position = new Vector3(heart1.transform.position.x, heart1.transform.position.y, -2f);
             heart2.transform.position = new Vector3(heart2.transform.position.x, heart2.transform.position.y, -2f);
             heart3.transform.position = new Vector3(heart3.transform.position.x, heart3.transform.position.y, -2f);
             heart4.transform.position = new Vector3(heart4.transform.position.x, heart4.transform.position.y, 2f);
             heart5.transform.position = new Vector3(heart5.transform.position.x, heart5.transform.position.y, 2f);
         }
-        if (playerHealth == 2)
+        if (playerHealth == 7)
         {
+            heart6.transform.position = new Vector3(heart6.transform.position.x, heart6.transform.position.y, -2f);
+            heart7.transform.position = new Vector3(heart7.transform.position.x, heart7.transform.position.y, -2f);
+            heart8.transform.position = new Vector3(heart8.transform.position.x, heart8.transform.position.y, -2f);
+            heart9.transform.position = new Vector3(heart9.transform.position.x, heart9.transform.position.y, -2f);
+            heart10.transform.position = new Vector3(heart10.transform.position.x, heart10.transform.position.y, -2f);
             heart1.transform.position = new Vector3(heart1.transform.position.x, heart1.transform.position.y, -2f);
             heart2.transform.position = new Vector3(heart2.transform.position.x, heart2.transform.position.y, -2f);
             heart3.transform.position = new Vector3(heart3.transform.position.x, heart3.transform.position.y, 2f);
             heart4.transform.position = new Vector3(heart4.transform.position.x, heart4.transform.position.y, 2f);
             heart5.transform.position = new Vector3(heart5.transform.position.x, heart5.transform.position.y, 2f);
         }
+        if (playerHealth == 6)
+        {
+            heart6.transform.position = new Vector3(heart6.transform.position.x, heart6.transform.position.y, -2f);
+            heart7.transform.position = new Vector3(heart7.transform.position.x, heart7.transform.position.y, -2f);
+            heart8.transform.position = new Vector3(heart8.transform.position.x, heart8.transform.position.y, -2f);
+            heart9.transform.position = new Vector3(heart9.transform.position.x, heart9.transform.position.y, -2f);
+            heart10.transform.position = new Vector3(heart10.transform.position.x, heart10.transform.position.y, -2f);
+            heart1.transform.position = new Vector3(heart1.transform.position.x, heart1.transform.position.y, -2f);
+            heart2.transform.position = new Vector3(heart2.transform.position.x, heart2.transform.position.y, 2f);
+            heart3.transform.position = new Vector3(heart3.transform.position.x, heart3.transform.position.y, 2f);
+            heart4.transform.position = new Vector3(heart4.transform.position.x, heart4.transform.position.y, 2f);
+            heart5.transform.position = new Vector3(heart5.transform.position.x, heart5.transform.position.y, 2f);
+        }
+        if (playerHealth == 5)
+        {
+            heart6.transform.position = new Vector3(heart6.transform.position.x, heart6.transform.position.y, -2f);
+            heart7.transform.position = new Vector3(heart7.transform.position.x, heart7.transform.position.y, -2f);
+            heart8.transform.position = new Vector3(heart8.transform.position.x, heart8.transform.position.y, -2f);
+            heart9.transform.position = new Vector3(heart9.transform.position.x, heart9.transform.position.y, -2f);
+            heart10.transform.position = new Vector3(heart10.transform.position.x, heart10.transform.position.y, -2f);
+            heart1.transform.position = new Vector3(heart1.transform.position.x, heart1.transform.position.y, 2f);
+            heart2.transform.position = new Vector3(heart2.transform.position.x, heart2.transform.position.y, 2f);
+            heart3.transform.position = new Vector3(heart3.transform.position.x, heart3.transform.position.y, 2f);
+            heart4.transform.position = new Vector3(heart4.transform.position.x, heart4.transform.position.y, 2f);
+            heart5.transform.position = new Vector3(heart5.transform.position.x, heart5.transform.position.y, 2f);
+        }
+        if (playerHealth == 4)
+        {
+            heart6.transform.position = new Vector3(heart6.transform.position.x, heart6.transform.position.y, -2f);
+            heart7.transform.position = new Vector3(heart7.transform.position.x, heart7.transform.position.y, -2f);
+            heart8.transform.position = new Vector3(heart8.transform.position.x, heart8.transform.position.y, -2f);
+            heart9.transform.position = new Vector3(heart9.transform.position.x, heart9.transform.position.y, -2f);
+            heart10.transform.position = new Vector3(heart10.transform.position.x, heart10.transform.position.y, 2f);
+            heart1.transform.position = new Vector3(heart1.transform.position.x, heart1.transform.position.y, 2f);
+            heart2.transform.position = new Vector3(heart2.transform.position.x, heart2.transform.position.y, 2f);
+            heart3.transform.position = new Vector3(heart3.transform.position.x, heart3.transform.position.y, 2f);
+            heart4.transform.position = new Vector3(heart4.transform.position.x, heart4.transform.position.y, 2f);
+            heart5.transform.position = new Vector3(heart5.transform.position.x, heart5.transform.position.y, 2f);
+        }
+        if (playerHealth == 3)
+        {
+            heart6.transform.position = new Vector3(heart6.transform.position.x, heart6.transform.position.y, -2f);
+            heart7.transform.position = new Vector3(heart7.transform.position.x, heart7.transform.position.y, -2f);
+            heart8.transform.position = new Vector3(heart8.transform.position.x, heart8.transform.position.y, -2f);
+            heart9.transform.position = new Vector3(heart9.transform.position.x, heart9.transform.position.y, 2f);
+            heart10.transform.position = new Vector3(heart10.transform.position.x, heart10.transform.position.y, 2f);
+            heart1.transform.position = new Vector3(heart1.transform.position.x, heart1.transform.position.y, 2f);
+            heart2.transform.position = new Vector3(heart2.transform.position.x, heart2.transform.position.y, 2f);
+            heart3.transform.position = new Vector3(heart3.transform.position.x, heart3.transform.position.y, 2f);
+            heart4.transform.position = new Vector3(heart4.transform.position.x, heart4.transform.position.y, 2f);
+            heart5.transform.position = new Vector3(heart5.transform.position.x, heart5.transform.position.y, 2f);
+        }
+        if (playerHealth == 2)
+        {
+            heart6.transform.position = new Vector3(heart6.transform.position.x, heart6.transform.position.y, -2f);
+            heart7.transform.position = new Vector3(heart7.transform.position.x, heart7.transform.position.y, -2f);
+            heart8.transform.position = new Vector3(heart8.transform.position.x, heart8.transform.position.y, 2f);
+            heart9.transform.position = new Vector3(heart9.transform.position.x, heart9.transform.position.y, 2f);
+            heart10.transform.position = new Vector3(heart10.transform.position.x, heart10.transform.position.y, 2f);
+            heart1.transform.position = new Vector3(heart1.transform.position.x, heart1.transform.position.y, 2f);
+            heart2.transform.position = new Vector3(heart2.transform.position.x, heart2.transform.position.y, 2f);
+            heart3.transform.position = new Vector3(heart3.transform.position.x, heart3.transform.position.y, 2f);
+            heart4.transform.position = new Vector3(heart4.transform.position.x, heart4.transform.position.y, 2f);
+            heart5.transform.position = new Vector3(heart5.transform.position.x, heart5.transform.position.y, 2f);
+        }
         if (playerHealth == 1)
         {
-            heart1.transform.position = new Vector3(heart1.transform.position.x, heart1.transform.position.y, -2f);
+            heart6.transform.position = new Vector3(heart6.transform.position.x, heart6.transform.position.y, -2f);
+            heart7.transform.position = new Vector3(heart7.transform.position.x, heart7.transform.position.y, 2f);
+            heart8.transform.position = new Vector3(heart8.transform.position.x, heart8.transform.position.y, 2f);
+            heart9.transform.position = new Vector3(heart9.transform.position.x, heart9.transform.position.y, 2f);
+            heart10.transform.position = new Vector3(heart10.transform.position.x, heart10.transform.position.y, 2f);
+            heart1.transform.position = new Vector3(heart1.transform.position.x, heart1.transform.position.y, 2f);
             heart2.transform.position = new Vector3(heart2.transform.position.x, heart2.transform.position.y, 2f);
             heart3.transform.position = new Vector3(heart3.transform.position.x, heart3.transform.position.y, 2f);
             heart4.transform.position = new Vector3(heart4.transform.position.x, heart4.transform.position.y, 2f);
@@ -124,6 +219,11 @@ public class PlayerScript : MonoBehaviour
         }
         if (playerHealth == 0)
         {
+            heart6.transform.position = new Vector3(heart6.transform.position.x, heart6.transform.position.y, 2f);
+            heart7.transform.position = new Vector3(heart7.transform.position.x, heart7.transform.position.y, 2f);
+            heart8.transform.position = new Vector3(heart8.transform.position.x, heart8.transform.position.y, 2f);
+            heart9.transform.position = new Vector3(heart9.transform.position.x, heart9.transform.position.y, 2f);
+            heart10.transform.position = new Vector3(heart10.transform.position.x, heart10.transform.position.y, 2f);
             heart1.transform.position = new Vector3(heart1.transform.position.x, heart1.transform.position.y, 2f);
             heart2.transform.position = new Vector3(heart2.transform.position.x, heart2.transform.position.y, 2f);
             heart3.transform.position = new Vector3(heart3.transform.position.x, heart3.transform.position.y, 2f);
@@ -144,7 +244,7 @@ public class PlayerScript : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Hearts")
         {
-            if (playerHealth < 5)
+            if (playerHealth < 10)
             {
                 playerHealth++;
             }
@@ -153,10 +253,10 @@ public class PlayerScript : MonoBehaviour
         else
         {
             StartCoroutine(levelManager.RedShow());
-            //playerHealth--;
+            playerHealth--;
             if (playerHealth <= 0)
             {
-                StartCoroutine(levelManager.Death());
+                levelManager.Death();
             }
         }
     }
