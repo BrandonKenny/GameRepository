@@ -455,7 +455,7 @@ GameObject:
   - component: {fileID: 490037073}
   - component: {fileID: 490037072}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1161,6 +1161,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   red: {fileID: 0}
+  plainsBoss: {fileID: 0}
+  plainsDefeated: {fileID: 0}
+  snowBoss: {fileID: 0}
+  snowDefeated: {fileID: 0}
+  desertBoss: {fileID: 0}
+  desertDefeated: {fileID: 0}
+  forestBoss: {fileID: 0}
+  forestDefeated: {fileID: 0}
+  finalBoss: {fileID: 0}
+  finalDefeated: {fileID: 0}
+  bossMusic: {fileID: 0}
+  normalMusic: {fileID: 0}
+  bossWall: {fileID: 0}
 --- !u!4 &1450907348
 Transform:
   m_ObjectHideFlags: 0

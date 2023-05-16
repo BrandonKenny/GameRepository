@@ -302,8 +302,11 @@ MonoBehaviour:
   desertDefeated: {fileID: 0}
   forestBoss: {fileID: 0}
   forestDefeated: {fileID: 0}
+  finalBoss: {fileID: 0}
+  finalDefeated: {fileID: 0}
   bossMusic: {fileID: 0}
   normalMusic: {fileID: 0}
+  bossWall: {fileID: 0}
 --- !u!4 &56799604
 Transform:
   m_ObjectHideFlags: 0
