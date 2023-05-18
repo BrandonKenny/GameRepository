@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Melee : MonoBehaviour
 {
-    public int check = 5;
+    public int check = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +16,7 @@ public class Melee : MonoBehaviour
     void Update()
     {
         check--;
-        if (check == 0)
+        if (check <= 0)
         {
             Destroy(gameObject);
         }
