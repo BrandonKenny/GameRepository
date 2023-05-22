@@ -683,8 +683,9 @@ MonoBehaviour:
   defeated: {fileID: 1351458126}
   home: {fileID: 543762735}
   startSound: {fileID: 1577880187}
-  rotateSpeed: 1
+  rotateSpeed: 10
   rotateDirection: {x: 1, y: 0, z: 0}
+  count: 0
 --- !u!4 &1341757417
 Transform:
   m_ObjectHideFlags: 0
@@ -1422,7 +1423,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!95 &1857828318
 Animator:
   serializedVersion: 3

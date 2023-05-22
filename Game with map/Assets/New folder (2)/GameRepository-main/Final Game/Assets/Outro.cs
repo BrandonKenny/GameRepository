@@ -17,6 +17,7 @@ public class Outro : MonoBehaviour
 
     public float rotateSpeed;
     public Vector3 rotateDirection = new Vector3();
+    public float count = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -34,17 +35,21 @@ public class Outro : MonoBehaviour
         defeated.gameObject.GetComponent<Transform>().position = new Vector2(0f, 20f);
 
         yield return new WaitForSeconds(1);
-        michael.transform.Rotate(rotateSpeed * rotateDirection * Time.deltaTime);
+        StartCoroutine(RotateMichael());
         michael.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, -3f);
 
         yield return new WaitForSeconds(4);
         michael.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
 
         yield return new WaitForSeconds(1);
+        clara.gameObject.GetComponent<Animator>().SetInteger("ClaraState", 1);
+        norman.gameObject.GetComponent<Animator>().SetInteger("NormanState", 2);
         clara.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(3f, 0f);
         norman.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(-3f, 0f);
 
         yield return new WaitForSeconds(2);
+        clara.gameObject.GetComponent<Animator>().SetInteger("ClaraState", 0);
+        norman.gameObject.GetComponent<Animator>().SetInteger("NormanState", 0);
         clara.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
         norman.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
 
@@ -55,6 +60,8 @@ public class Outro : MonoBehaviour
         home.gameObject.GetComponent<Transform>().position = new Vector2(0f, 20f);
 
         yield return new WaitForSeconds(1);
+        clara.gameObject.GetComponent<Animator>().SetInteger("ClaraState", 1);
+        norman.gameObject.GetComponent<Animator>().SetInteger("NormanState", 1);
         clara.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(3f, 0f);
         norman.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(3f, 0f);
 
@@ -64,5 +71,15 @@ public class Outro : MonoBehaviour
 
         yield return new WaitForSeconds(1);
         levelManager.LoadLevel("Win");
+    }
+
+    IEnumerator RotateMichael()
+    {
+        while (count <= 448)
+        {
+            count += 2;
+            michael.transform.rotation = Quaternion.Euler(0f, 0f, count);
+            yield return new WaitForSeconds(0.01f);
+        }
     }
 }
