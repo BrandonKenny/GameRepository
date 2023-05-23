@@ -148,7 +148,7 @@ public class LevelManager : MonoBehaviour
         //finalDefeated.gameObject.GetComponent<Transform>().position = new Vector2(480.5f, 450.5f);
         yield return new WaitForSeconds(3.5f);
         finalDefeated.gameObject.GetComponent<Transform>().position = new Vector2(0f, 1500f);
-        LoadLevel("Win");
+        LoadLevel("Outro");
     }
 
     //BossWall Text

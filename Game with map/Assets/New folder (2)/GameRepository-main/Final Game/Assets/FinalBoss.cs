@@ -7,7 +7,7 @@ public class FinalBoss : MonoBehaviour
     public GameObject player;
     private bool isInPlayerRange = false;
     public LayerMask playerLayer;
-    private float playerRange = 7;
+    private float playerRange = 9;
     public int finalBossHealth = 50;
     public Animator animator;
     public GameObject projectilePrefab;

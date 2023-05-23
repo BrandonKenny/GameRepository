@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/New folder (2)/GameRepository-main/Final Game/Assets/Scenes/Credits.unity
     guid: f997ed9547dd0cc4e8e4bf755cc81314
+  - enabled: 1
+    path: Assets/New folder (2)/GameRepository-main/Final Game/Assets/Scenes/Outro.unity
+    guid: dbd8b4b5a082fb446a7cf1a48bd18a59
   m_configObjects: {}
